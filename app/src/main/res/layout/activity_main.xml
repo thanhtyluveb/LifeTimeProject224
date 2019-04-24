@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:padding="5dp"
+        android:id="@+id/toplayout"
+        android:layout_width="0dp"
+        android:layout_height="80dp"
+        android:background="#FCF5F5F5"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:weightSum="10"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:layout_marginLeft="20dp"
+            android:scaleType="fitCenter"
+            android:id="@+id/imgsetting"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:background="@drawable/setbtn"
+
+           />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="5.5"
+            android:fontFamily="sans-serif"
+            android:lineHeight="28dp"
+            android:lineSpacingExtra="7sp"
+            android:paddingLeft="20dp"
+            android:text="@string/shipping_list"
+            android:textColor="#de000000"
+            android:textSize="20sp"
+            android:textStyle="normal" />
+
+        <TextView
+            android:id="@+id/tvcontinueshipping"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="4.5"
+            android:fontFamily="sans-serif"
+            android:gravity="center_horizontal"
+            android:letterSpacing="0.04"
+            android:text="@string/continuous_shipping"
+            android:textColor="#989b9b9b"
+            android:textSize="13sp"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/backgroundlayout"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="#d8d8d8"
+        android:gravity="center"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toplayout">
+
+        <ImageView
+            android:layout_width="188dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="68dp"
+            android:src="@drawable/bg" />
+
+        <TextView
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif"
+            android:gravity="center_horizontal"
+            android:lineSpacingExtra="1.3sp"
+            android:textColor="#4a4a4a"
+            android:textSize="20sp"
+            android:textStyle="normal"
+            android:layout_marginBottom="18dp"
+            android:text="Empty in shipping list" />
+
+        <TextView
+            android:layout_width="187dp"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif"
+            android:gravity="center_horizontal"
+            android:lineSpacingExtra="2sp"
+            android:textColor="#4a4a4a"
+            android:textSize="13sp"
+            android:textStyle="normal"
+            android:text="Add a shipping address and it
+will show up here." />
+    </LinearLayout>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/rvmap"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="#d8d8d8"
+        android:clipChildren="true"
+        android:clipToPadding="true"
+        android:layerType="none"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/toplayout" />
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/floatingActionButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginBottom="20dp"
+        android:clickable="true"
+        android:elevation="10dp"
+        android:focusable="true"
+        android:src="@android:drawable/ic_input_add"
+        app:backgroundTint="#009688"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+</android.support.constraint.ConstraintLayout>
