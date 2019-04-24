@@ -3,4 +3,5 @@
     <string name="shopping_list">Shopping List</string>
     <string name="continuous_shipping">Continuous shipping</string>
     <string name="shipping_list">Shipping list</string>
+    <string name="setting">Setting</string>
 </resources>

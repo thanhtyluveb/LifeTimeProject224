@@ -7,7 +7,6 @@
     tools:context=".MainActivity">
 
     <LinearLayout
-        android:padding="5dp"
         android:id="@+id/toplayout"
         android:layout_width="0dp"
         android:layout_height="80dp"
